@@ -42,3 +42,24 @@ This project is designed to be completed in the following steps:
 
 
 Feel free to modify and extend the notebook to explore further aspects of the data and experiment with different algorithms. Good luck.
+
+## Report Mini-Project 
+1. Tiền xử lý dữ liệu và trực quan hóa.
+2. Áp dụng Phân tích thành phần chính (PCA) để giảm chiều dữ liệu.
+3. So sánh hiệu suất của các thuật toán học máy khác nhau trước và sau khi áp dụng PCA.
+4. Đánh giá các mô hình sử dụng các metric: accuracy, precision, recall, và F1-score.
+- Sử dụng bốn mô hình khác nhau để so sánh hiệu suất: Logistic Regression, Random Forest, CNN và MLP.
+**Mô Hình CNN**
+Mô hình CNN được xây dựng và huấn luyện sử dụng Keras. Các tham số chính của mô hình bao gồm:
+- Các lớp Convolutional, MaxPooling, Dense
+**Tinh Chỉnh Siêu Tham Số**
+Sử dụng RandomizedSearchCV để tìm kiếm các siêu tham số tốt nhất cho từng mô hình dựa trên các grid siêu tham số xác định trước. Dưới đây là các grid siêu tham số được sử dụng:
+- Logistic Regression: {'classifier__C': [0.1, 1, 10]}
+- Random Forest: {'classifier__n_estimators': [50, 100, 200]}
+- MLP: {'classifier__hidden_layer_sizes': [(50,), (100,), (50, 50)]}
+**Nhận Xét Tổng Quát**
+- Logistic Regression: Mô hình này hoạt động tốt trên cả dữ liệu gốc và dữ liệu PCA, nhưng hiệu suất có thể kém hơn so với Random Forest và MLP khi số lượng tính năng lớn.
+- Random Forest: Hoạt động rất tốt trên dữ liệu gốc và cũng duy trì hiệu suất tốt trên dữ liệu PCA. Đây là mô hình mạnh mẽ và có khả năng xử lý các tính năng không tuyến tính.
+- MLP: Mô hình này có hiệu suất tốt nhất trong số các mô hình đã kiểm tra. MLP có thể học được các mẫu phức tạp trong dữ liệu.
+**Kết Luận**
+Dự án đã thành công trong việc phân loại cảm xúc từ hình ảnh khuôn mặt sử dụng nhiều mô hình học máy khác nhau. Mô hình CNN có hiệu suất tốt nhất, cho thấy tầm quan trọng của việc sử dụng mạng nơ-ron sâu trong các tác vụ nhận dạng hình ảnh. 
