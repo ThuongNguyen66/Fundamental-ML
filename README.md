@@ -57,7 +57,7 @@ Mô hình CNN được xây dựng và huấn luyện sử dụng Keras. Các th
 
 **Tinh Chỉnh Siêu Tham Số**
 
-Sử dụng RandomizedSearchCV để tìm kiếm các siêu tham số tốt nhất cho từng mô hình dựa trên các grid siêu tham số xác định trước. Dưới đây là các grid siêu tham số được sử dụng:
+Sử dụng GridSearchCV để tìm kiếm các siêu tham số tốt nhất cho từng mô hình dựa trên các grid siêu tham số xác định trước. Dưới đây là các grid siêu tham số được sử dụng:
 
 - Logistic Regression: {'classifier__C': [0.1, 1, 10]}
 - Random Forest: {'classifier__n_estimators': [50, 100, 200]}
